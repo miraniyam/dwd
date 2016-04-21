@@ -13,12 +13,20 @@
         android:layout_weight="0.95"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:textColor="#000000"
-            android:text="홈" />
+        <CalendarView
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="1"
+            android:firstDayOfWeek="2"
+            android:id="@+id/calendar"
+            android:focusedMonthDateColor="#f78280"
+            android:unfocusedMonthDateColor="#7a6b6b"
+            android:showWeekNumber="false"
+            android:background="#A0ffffff"
+            android:selectedWeekBackgroundColor="#00000000"
+            />
 
     </LinearLayout>
 

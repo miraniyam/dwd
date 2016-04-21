@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -26,6 +27,7 @@ public class MainActivity extends Activity {
         btn_status=(ImageButton)findViewById(R.id.btn_status);
         btn_cosme=(ImageButton)findViewById(R.id.btn_cosme);
         btn_option=(ImageButton)findViewById(R.id.btn_option);
+        calendar = (CalendarView)findViewById(R.id.calendar);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +62,13 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(MainActivity.this, OptionActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
+            }
+        });
+
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                Toast.makeText(MainActivity.this, ""+year+"/"+(month+1)+"1"+dayOfMonth, Toast.LENGTH_SHORT).show();
             }
         });
     }
