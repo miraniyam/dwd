@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="rosequartz">#F7CAC9</color>
+    <color name ="deepPink">#ff8d7c</color>
+    <color name ="white">#ffffff</color>
+    <color name ="serenity">#92A8D1</color>
+    <color name ="brown">#9c6b60</color>
 </resources>
