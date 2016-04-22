@@ -4,28 +4,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.miran.bottombar.OptionActivity"
-    android:background="#F7CAC9">
+    android:background="@color/rosequartz"
+    tools:context="com.example.jeonsoeun.setting.MainActivity">
     <TextView
         android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/deepPink"
+        android:paddingLeft="20dp"
+        android:text="설정"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center_vertical"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SETTING"
-        android:layout_weight="0.95"
-        android:textSize="30pt"/>
-
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_weight="0.95">
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:textSize="20sp"
+            android:text="비밀번호 변경"
+            android:id="@+id/btnPwdChange"
+            android:layout_marginBottom="10dp"
+            android:onClick="btnClick"
+            android:background="@color/rosequartz"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:textSize="20sp"
+            android:text="알람 설정"
+            android:id="@+id/btnAlarm"
+            android:layout_marginBottom="10dp"
+            android:onClick="btnClick"
+            android:background="@color/rosequartz"
+            />
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:textSize="20sp"
+            android:text="문의"
+            android:id="@+id/btnQnA"
+            android:layout_marginBottom="10dp"
+            android:onClick="btnClick"
+            android:background="@color/rosequartz"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dwdlogo"
+            android:id="@+id/btnLogo"
+            android:onClick="btnClick"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#92A8D1"
+        android:layout_height="60dp"
+        android:background="@color/deepPink"
+        android:layout_margin="0dp"
         android:orientation="horizontal"
-        android:layout_gravity="bottom"
         android:gravity="center"
-        >
-
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottombar">
         <ImageButton
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/btn_home"
             android:src="@drawable/home"
             android:background="@null"
@@ -34,7 +83,7 @@
 
         <ImageButton
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/btn_status"
             android:src="@drawable/sta"
             android:background="@null"
@@ -44,7 +93,7 @@
 
         <ImageButton
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/btn_cosme"
             android:src="@drawable/cos"
             android:background="@null"
@@ -53,14 +102,11 @@
 
         <ImageButton
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/btn_option"
             android:src="@drawable/set"
             android:background="@null"
             android:scaleType="fitXY"
             android:layout_margin="15dp"/>
-
     </LinearLayout>
-
-
 </LinearLayout>

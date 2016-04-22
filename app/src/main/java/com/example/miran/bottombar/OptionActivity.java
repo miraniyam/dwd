@@ -18,6 +18,26 @@ public class OptionActivity extends Activity {
         setContentView(R.layout.option_layout);
         init();
     }
+    public void btnClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.btnPwdChange:
+                passwordChange();
+                break;
+            case R.id.btnAlarm:
+                break;
+            case R.id.btnQnA:
+                break;
+            case R.id.btnLogo:
+                break;
+        }
+    }
+    void passwordChange(){
+        Intent intent = new Intent(this,PasswordActivity.class);
+        intent.putExtra("mode", 1);
+        startActivity(intent);
+    }
 
     void init() {
         btn_home=(ImageButton)findViewById(R.id.btn_home);
@@ -33,7 +53,6 @@ public class OptionActivity extends Activity {
                 startActivity(intent);
             }
         });
-
         btn_status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
